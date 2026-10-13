@@ -1,0 +1,29 @@
+{
+  "name": "gamehub-backend",
+  "version": "1.0.0",
+  "description": "API REST do sistema GameHub para gerenciamento de jogos",
+  "main": "api/index.js",
+  "scripts": {
+    "start": "node api/index.js",
+    "dev": "node --watch api/index.js",
+    "test": "node tests/api.test.js",
+    "seed": "node scripts/seed.js"
+  },
+  "keywords": [
+    "gamehub",
+    "games",
+    "api",
+    "rest",
+    "express",
+    "mongodb",
+    "mongoose"
+  ],
+  "author": "Arthur Possato, Enzo Cardona, Pedro Sante",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "mongoose": "^8.9.5"
+  }
+}
