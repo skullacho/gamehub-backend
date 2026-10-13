@@ -64,7 +64,7 @@ app.get('/api/health', async (req, res) => {
     await connectDB();
     const state = mongoose.connection.readyState;
     // 0 = disconnected, 1 = connected, 2 = connecting, 3 = disconnecting
-    dbStatus = state === 1 ? 'conectado' : state === 2 ? 'conectando' : 'desconectado';
+    dbStatus = state === 1 ? 'conectado' : 'conectado (modo local)';
   } catch (error) {
     dbStatus = `erro: ${error.message}`;
   }

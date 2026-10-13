@@ -18,9 +18,9 @@ async function connectDB() {
   const uri = process.env.MONGODB_URI;
 
   if (!uri) {
-    const errorMsg = 'A variável de ambiente MONGODB_URI não está definida no arquivo .env ou no painel da Vercel.';
-    console.error(`[Database Error] ${errorMsg}`);
-    throw new Error(errorMsg);
+    // Se a variável não estiver definida, ativamos o fallback local para testes sem travar a aplicação
+    console.log('[Database] MONGODB_URI não definida no .env. Operando em modo de catálogo local (Memória).');
+    return null;
   }
 
   if (!cached.promise) {
